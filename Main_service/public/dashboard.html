@@ -198,45 +198,45 @@
             }
         }
 
-        async function callAPI2() {
-            showLoading(2);
-            try {
-                const response = await fetch('http://localhost:3002/protected', {
-                    method: 'GET',
-                    headers: {
-                        'Content-Type': 'application/json'
-                    },
-                    credentials: 'include',
-                    mode: 'cors'
-                });
-                const data = await response.text();
-                showResponse(2, data);
-            } catch (error) {
-                showResponse(2, { error: error.message });
-            } finally {
-                hideLoading(2);
-            }
-        }
+        // async function callAPI2() {
+        //     showLoading(2);
+        //     try {
+        //         const response = await fetch('http://localhost:3002/protected', {
+        //             method: 'GET',
+        //             headers: {
+        //                 'Content-Type': 'application/json'
+        //             },
+        //             credentials: 'include',
+        //             mode: 'cors'
+        //         });
+        //         const data = await response.text();
+        //         showResponse(2, data);
+        //     } catch (error) {
+        //         showResponse(2, { error: error.message });
+        //     } finally {
+        //         hideLoading(2);
+        //     }
+        // }
 
-        async function callAPI3() {
-            showLoading(3);
-            try {
-                const response = await fetch('http://localhost:3003/protected', {
-                    method: 'GET',
-                    headers: {
-                        'Content-Type': 'application/json'
-                    },
-                    credentials: 'include',
-                    mode: 'cors'
-                });
-                const data = await response.text();
-                showResponse(3, data);
-            } catch (error) {
-                showResponse(3, { error: error.message });
-            } finally {
-                hideLoading(3);
-            }
-        }
+        // async function callAPI3() {
+        //     showLoading(3);
+        //     try {
+        //         const response = await fetch('http://localhost:3003/protected', {
+        //             method: 'GET',
+        //             headers: {
+        //                 'Content-Type': 'application/json'
+        //             },
+        //             credentials: 'include',
+        //             mode: 'cors'
+        //         });
+        //         const data = await response.text();
+        //         showResponse(3, data);
+        //     } catch (error) {
+        //         showResponse(3, { error: error.message });
+        //     } finally {
+        //         hideLoading(3);
+        //     }
+        // }
 
         async function logout() {
             try {
